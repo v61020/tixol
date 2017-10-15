@@ -12,17 +12,19 @@ client.on("message", (message) => {
   if (!message.content.startsWith(config.prefix)) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  if (command === "ping")) {
-    message.channel.send("Pong!");
-  }
-  if (command === "meow") {
+  switch (command) {
+  case "ping" :
+    message.channel.send('Pong!');
+    break;
+  case "meow" :
     let member = message.mentions.members.first();
     message.channel.send("Sending a meow!")
     member.send("Meow!").catch(message.channel.send("Uh oh, something has gone wrong while trying to meow."))
-  }
-  if (command === "shard") {
-    message.channel.send("Shard: " + client.shard)
-  }
+    break;
+   case "shard"
+      message.channel.send("Shard: " + client.shard)
+      break;
+}
 });
 
 client.login(config.token);
