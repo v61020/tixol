@@ -22,12 +22,8 @@ client.on("message", (message) => {
   case "meow" :
     let member = message.mentions.members.first();
     message.channel.send("Sending a meow!")
-    member.send("Meow!").catch(message.channel.send("Completed!"))
+    member.send("Meow!").catch( message.channel.send("Completed!") )
     break;
-  case "shard" :
-    message.channel.send("The bot is on shard " + client.shard.id)
-    break;
-}
-});
+}});
 
 client.login(process.env.BOT_TOKEN);
