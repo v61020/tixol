@@ -23,7 +23,7 @@ client.on("message", (message) => {
     member.send("Meow!").catch(message.channel.send("Uh oh, something has gone wrong while trying to meow."))
     break;
   case "shard" :
-    message.channel.send("The bot is on shard " + client.shard)
+    message.channel.send("The bot is on shard " + client.shard.id)
     break;
 }
 });
