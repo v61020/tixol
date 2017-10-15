@@ -28,10 +28,6 @@ client.on("message", (message) => {
   case "shard" :
     message.channel.send("The bot is on shard " + client.shard.id)
     break;
-   case "manager" :
-  message.reply({ ManagerThing })    
-      
-     break;
 }
 });
 
