@@ -54,6 +54,54 @@ const prefix = config.prefix;
 
 client.on("ready", () => {
   console.log("I am ready!");
+  const ManagerThing =       const ManagerThing = {
+  "title": "Bot Manager",
+  "description": "Bot manager details are shown below",
+  "color": 4343865,
+  "timestamp": "2017-10-15T12:34:59.432Z",
+  "footer": {
+    "icon_url": "https://i.imgur.com/FRlY1uj.png",
+    "text": "Manager Test Ran"
+  },
+  "thumbnail": {
+    "url": "https://i.imgur.com/FRlY1uj.png"
+  },
+  "image": {
+    "url": "https://i.imgur.com/FRlY1uj.png"
+  },
+  "author": {
+    "name": "Tixol Manager",
+    "url": "https://discordapp.com",
+    "icon_url": "https://i.imgur.com/FRlY1uj.png"
+  },
+  "fields": [
+    {
+      "name": "Bot Name",
+      "value": "Tixol",
+      "inline": true
+    },
+    {
+      "name": "Bot Description",
+      "value": "One pixel can mean so much more.",
+      "inline": true
+    },
+    {
+      "name": "Bot Creators",
+      "value": "V61020#5084, muhammed51#3243, DexoroYT#7100",
+      "inline": true
+    },
+    {
+      "name": "Shards",
+      "value": client.shard.id + "/7",
+      "inline": true
+    },
+    {
+      "name": "Servers on Shard",
+      "value": client.guilds + "/2500",
+      "inline": true
+    }
+  ]
+};
 });
 
 client.on("message", (message) => {
