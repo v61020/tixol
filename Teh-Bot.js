@@ -17,7 +17,8 @@ client.on("message", (message) => {
   }
   if (command === "meow")) {
     let member = message.mentions.members.first();
-    message.channel.send(member + ", Meow!");
+    message.channel.send("Sending a meow!")
+    member.send("Meow!").catch(message.channel.send("Uh oh, something has gone wrong while trying to meow."))
   }
 });
 
