@@ -1,0 +1,13 @@
+{
+  "name": "Tixol",
+  "description": "One pixel can mean so much.",
+  "version": "0.0.9",
+  "main": "sharding.js",
+  "scripts": {
+    "start": "node sharding.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
+  }
+}
