@@ -54,7 +54,7 @@ const prefix = config.prefix;
 
 client.on("ready", () => {
   console.log("I am ready!");
-  const ManagerThing =       const ManagerThing = {
+  const ManagerThing =
   "title": "Bot Manager",
   "description": "Bot manager details are shown below",
   "color": 4343865,
