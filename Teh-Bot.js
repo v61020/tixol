@@ -15,10 +15,13 @@ client.on("message", (message) => {
   if (command === "ping")) {
     message.channel.send("Pong!");
   }
-  if (command === "meow")) {
+  if (command === "meow") {
     let member = message.mentions.members.first();
     message.channel.send("Sending a meow!")
     member.send("Meow!").catch(message.channel.send("Uh oh, something has gone wrong while trying to meow."))
+  }
+  if (command === "shard") {
+    message.channel.send("Shard: " + client.shard)
   }
 });
 
