@@ -41,10 +41,10 @@ client.on("message", (message) => {
     message.channel.send({ embed: {"description": 'Pong! The ping is ' + client.ping + 'ms.', "color": 14552848} });
     break;
   case "blah" :
-    message.channel.send('Meh.');
+    message.channel.send({ embed: {"description": 'Meh.', "color": 6122365}});
     break;
   case "foo" :
-    message.channel.send('Bar!');
+    message.channel.send({ embed: {"description": 'Bar!', "color": 2671673}});
     break;
    case "8ball" :
          	var sayings = ["It is certain",
