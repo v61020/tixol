@@ -38,7 +38,7 @@ client.on("message", (message) => {
 
  switch (command) {
   case "ping" :
-    message.channel.send('Pong!');
+    message.channel.send('Pong! The ping is' + client.ping + 'ms');
     break;
   case "blah" :
     message.channel.send('Meh.');
