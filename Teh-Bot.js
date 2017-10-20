@@ -8,9 +8,12 @@ let prefix = "t!";
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?";
 var ModerationCMDS = "None - come back soon!";
 var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nshard - 1v1 me bro.";
+var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
+var versionIDNumber = "1.0.0"
+var SystemList = "t!help | " + versionIDName[1]
 const AnEmbed = {
   "title": "tCommands",
-  "description": "The prefix is t!",
+  "description": "The prefix is " + prefix,
   "color": 15090910,
   "fields": [
     {
