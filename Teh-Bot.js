@@ -79,7 +79,7 @@ client.on("message", (message) => {
      message.reply({embed: ResultEmbed});
      break;
   case "info" :
-    message.reply({embed: {"description": "The servers on this shard is" + client.guilds.size + ". This server is on shard " + client.shard.id + "/7.", "color": 11015181}});
+    message.reply({embed: {"description": "The servers on this shard is " + client.guilds.size + ". This server is on shard " + client.shard.id + "/7.", "color": 11015181}});
     break;
   case "help" :
     message.reply({embed: {"description": "👌 Check your DMs, I have sent a help message!", "color": 11015181}});
