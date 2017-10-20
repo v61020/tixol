@@ -42,7 +42,7 @@ client.on("message", (message) => {
 										"Very doubtful"];
 
 		 var result = Math.floor((Math.random() * sayings.length) + 0);
-		 var ResultEmbed = {"description": sayings[result], "color": 000000};
+		 var ResultEmbed = {"description": sayings[result], "color": 01301313};
      message.reply({embed: ResultEmbed});
      break;
   case "help" :
