@@ -42,7 +42,7 @@ client.on("message", (message) => {
 										"Very doubtful"];
 
 		 var result = Math.floor((Math.random() * sayings.length) + 0);
-     bot.reply(message, sayings[result]);
+     message.reply(sayings[result]);
      break;
   case "help" :
     message.channel.send('Sending help');
