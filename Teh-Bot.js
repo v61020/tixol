@@ -42,7 +42,8 @@ client.on("message", (message) => {
 										"Very doubtful"];
 
 		 var result = Math.floor((Math.random() * sayings.length) + 0);
-     message.reply({embed: "description": sayings[result], "color": 000000});
+		 var ResultEmbed = {"description": sayings[result], "color": 000000};
+     message.reply({embed: ResultEmbed});
      break;
   case "help" :
     message.reply({embed: "description": "👌 Check your DMs, I have sent a help message!", "color": 11015181});
