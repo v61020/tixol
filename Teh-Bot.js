@@ -38,7 +38,7 @@ client.on("message", (message) => {
 
  switch (command) {
   case "ping" :
-    message.channel.send('Pong! The ping is' + client.ping + 'ms');
+    message.channel.send({ embed: {"description": 'Pong! The ping is ' + client.ping + 'ms.', "color": 14552848} });
     break;
   case "blah" :
     message.channel.send('Meh.');
