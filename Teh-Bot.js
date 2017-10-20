@@ -74,6 +74,7 @@ client.on("message", (message) => {
      break;
   case "help" :
     message.reply({embed: {"description": "👌 Check your DMs, I have sent a help message!", "color": 11015181}});
+    message.author.send({embed: AnEmbed})
     break;
 }
 });
