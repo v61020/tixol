@@ -3,6 +3,33 @@ const client = new Discord.Client();
 
 // Set the prefix
 let prefix = "t!";
+
+// Command list
+var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?";
+var ModerationCMDS = "None - come back soon!";
+var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!";
+const AnEmbed = {
+  "title": "tCommands",
+  "description": "The prefix is t!",
+  "color": 15090910,
+  "fields": [
+    {
+      "name": "Information",
+      "value": "t!help\nt!hq - The HQ\nt!invite - Invite me!",
+      "inline": true
+    },
+    {
+      "name": "Moderation",
+      "value": "Check back later for moderation commands!",
+      "inline": true
+    },
+    {
+      "name": "Fun",
+      "value": "8ball - Get an 8ball",
+      "inline": true
+    }
+  ]
+};
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
   if (!message.content.startsWith(prefix) || message.author.bot) return;
