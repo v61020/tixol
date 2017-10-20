@@ -7,7 +7,7 @@ let prefix = "t!";
 // Command list
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?";
 var ModerationCMDS = "None - come back soon!";
-var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!";
+var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nshard - 1v1 me bro.";
 const AnEmbed = {
   "title": "tCommands",
   "description": "The prefix is t!",
