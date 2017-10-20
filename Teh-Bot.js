@@ -5,9 +5,9 @@ const client = new Discord.Client();
 let prefix = "t!";
 
 // Command list
-var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?";
+var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.";
 var ModerationCMDS = "None - come back soon!";
-var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nshard - 1v1 me bro.";
+var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!";
 var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
 var versionIDNumber = "1.0.0"
 var SystemList = "t!help | " + versionIDName[1]
@@ -78,10 +78,13 @@ client.on("message", (message) => {
 		 var ResultEmbed = {"title": "8ball Answer", "description": sayings[result], "color": 01301313};
      message.reply({embed: ResultEmbed});
      break;
+  case "info" :
+    message.reply({embed: {"description": "The servers on this shard is" + client.guilds.size + ". This server is on shard " + client.shard.id + "/7.", "color": 11015181}});
+    break;
   case "help" :
     message.reply({embed: {"description": "👌 Check your DMs, I have sent a help message!", "color": 11015181}});
     message.author.send({embed: AnEmbed})
-    break;
+    break;	 
 }
 });
 
