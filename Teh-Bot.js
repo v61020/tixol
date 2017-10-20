@@ -15,17 +15,17 @@ const AnEmbed = {
   "fields": [
     {
       "name": "Information",
-      "value": "t!help\nt!hq - The HQ\nt!invite - Invite me!",
+      "value": InformationCMDS,
       "inline": true
     },
     {
       "name": "Moderation",
-      "value": "Check back later for moderation commands!",
+      "value": ModerationCMDS,
       "inline": true
     },
     {
       "name": "Fun",
-      "value": "8ball - Get an 8ball",
+      "value": FunCMDS,
       "inline": true
     }
   ]
