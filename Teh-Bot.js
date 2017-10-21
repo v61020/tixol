@@ -5,7 +5,7 @@ const client = new Discord.Client();
 let prefix = "t!";
 
 // Command list
-var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.";
+var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.\nanswer - Serious Q&A.";
 var ModerationCMDS = "None - come back soon!";
 var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!";
 var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
@@ -84,7 +84,19 @@ client.on("message", (message) => {
   case "help" :
     message.reply({embed: {"description": "👌 Check your DMs, I have sent a help message!", "color": 11015181}});
     message.author.send({embed: AnEmbed})
-    break;	 
+    break;
+    case "answer" :
+   	var sayings = [
+										"Yes",
+										"No",
+										"Maybe",
+		       "I don't know",
+									];
+
+		 var result = Math.floor((Math.random() * sayings.length) + 0);
+		 var ResultEmbed = {"title": "My answer", "description": sayings[result], "color": 01301313};
+     message.reply({embed: ResultEmbed});
+	break;	 
 }
 });
 
