@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 // Set the prefix
 let prefix = "t!";
-
+var member = null
 // Command list
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.\nanswer - Serious Q&A.";
 var ModerationCMDS = "warn - Sends a DM to the specified user with a message saying that they've been warned.";
@@ -103,7 +103,7 @@ client.on("message", (message) => {
 		 
 	break;	 
 	 case "warn" :
-    let member = message.mentions.members.first();
+    member = message.mentions.members.first();
 		 
 		 if (!message.member.hasPermission("KICK_MEMBERS")) { message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to warn without the Kick Members permission!?"}})
 								    } else if (message.mentions.users.size === 0) {
@@ -113,9 +113,10 @@ client.on("message", (message) => {
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been warned in " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been warned."}})	
 				}
+		 member = null
 		       break;
 	 case "annoy":
-		 let member = message.mentions.members.first();
+		 member = message.mentions.members.first();
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
 		 } else {
@@ -127,6 +128,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
 		 }
+		 member = null
 		 break;
 		 
 
