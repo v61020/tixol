@@ -6,7 +6,7 @@ let prefix = "t!";
 
 // Command list
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.\nanswer - Serious Q&A.";
-var ModerationCMDS = "None - come back soon!";
+var ModerationCMDS = "warn - Sends a DM to the specified user with a message saying that they've been warned.";
 var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!";
 var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
 var versionIDNumber = "1.0.0"
@@ -100,8 +100,15 @@ client.on("message", (message) => {
 		 var result = Math.floor((Math.random() * sayings.length) + 0);
 		 var ResultEmbed = {"title": "My answer", "description": sayings[result], "color": 01301313};
      message.reply({embed: ResultEmbed});
+		 
 	break;	 
+         // Kick a single user in the mention
+if (command === "warn") {
+  let member = message.mentions.members.first();
+  member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been warned in " + message.guild.name".").then(message.channel.send("Warned this user!"))
+}
 }
 });
+
 
 client.login(process.env.BOT_TOKEN);
