@@ -102,13 +102,12 @@ client.on("message", (message) => {
      message.reply({embed: ResultEmbed});
 		 
 	break;	 
-         // Kick a single user in the mention
-if (command === "warn") {
+	 case "warn" :
   let member = message.mentions.members.first();
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been warned in " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been warned."}})	
 		       break;
-}
+
 }
 });
 
