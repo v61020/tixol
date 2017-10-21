@@ -104,8 +104,8 @@ client.on("message", (message) => {
 	break;	 
 	 case "warn" :
   let member = message.mentions.members.first();
-		 let has_kick = message.member.hasPermission("KICK_MEMBERS");
-		 if (!has_kick) { message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to warn without the Kick Members permission!?}})} else {  e },
+		 
+		 if (!message.member.hasPermission("KICK_MEMBERS")) { message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to warn without the Kick Members permission!?}})} else {  e },
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been warned in " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been warned."}})	
 				}
