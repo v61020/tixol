@@ -7,7 +7,7 @@ var member = null
 // Command list
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.\nanswer - Serious Q&A.";
 var ModerationCMDS = "warn - Sends a DM to the specified user with a message saying that they've been warned.";
-var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nannoy - **Use with caution.**\nSome people do not like being annoyed, \nbut if you can do it, you can do it.\nannoy-bomb - A bigger annoyance.\ntsar-annoy - **DANGER!** USE THIS ONLY WITH PERMISSION OF THE PERSON YOU ARE ANNOYING\nIT COULD BE COUNTED AS HARRASMENT IF YOU DO NOT USE THIS WISELY";
+var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nannoy - **Use with caution.**\nSome people do not like being annoyed, \nbut if you can do it, you can do it.\nannoybomb - A bigger annoyance.\nannoynuke - **DANGER!** USE THIS ONLY WITH PERMISSION OF THE PERSON YOU ARE ANNOYING\nIT COULD BE COUNTED AS HARRASMENT IF YOU DO NOT USE THIS WISELY";
 var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
 var versionIDNumber = "1.0.0"
 var SystemList = "t!help | " + versionIDName[2]
@@ -130,7 +130,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 }
 		 member = null
 		 break;
-		 case "tsar-annoy":
+		 case "annoynuke":
 		 member = message.mentions.members.first();
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
@@ -192,7 +192,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 }
 		 member = null
 		 break;
-		 case "annoy":
+		 case "annoybomb":
 		 member = message.mentions.members.first();
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
