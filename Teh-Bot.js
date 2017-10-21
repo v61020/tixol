@@ -106,6 +106,7 @@ client.on("message", (message) => {
 if (command === "warn") {
   let member = message.mentions.members.first();
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been warned in " + message.guild.name".").then(message.channel.send("Warned this user!"))
+		       break;
 }
 }
 });
