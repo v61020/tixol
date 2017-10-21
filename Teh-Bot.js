@@ -121,7 +121,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
 		 } else {
 
-			message.channel.send({embed: {"title": "LEL", "color": 10196769,  "description": "Are you ready for them to be ANNOYED?"}})   
+			message.reply({embed: {"title": "LEL", "color": 10196769,  "description": "Are you ready for them to be ANNOYED?"}})   
 		       member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}})
 
 		 }
