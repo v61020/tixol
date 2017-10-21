@@ -119,15 +119,10 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
 		 } else {
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+
 			message.channel.send({embed: {"title": "LEL", "color": 10196769,  "description": "Are you ready for them to be ANNOYED?"}})   
-			
-			member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
-			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
-			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
-			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
-			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
-			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
-			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+		       member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
