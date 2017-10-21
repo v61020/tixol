@@ -131,7 +131,6 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
 			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
-			 message.delete(0)
 		 }
 		 break;
 		 
