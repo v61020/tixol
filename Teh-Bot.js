@@ -103,7 +103,7 @@ client.on("message", (message) => {
 		 
 	break;	 
 	 case "warn" :
-    var member = message.mentions.members.first();
+    let member = message.mentions.members.first();
 		 
 		 if (!message.member.hasPermission("KICK_MEMBERS")) { message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to warn without the Kick Members permission!?"}})
 								    } else if (message.mentions.users.size === 0) {
@@ -115,7 +115,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 				}
 		       break;
 	 case "annoy":
-		 var member = message.mentions.members.first();
+		 let member = message.mentions.members.first();
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
 		 } else {
