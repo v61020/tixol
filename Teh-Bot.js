@@ -91,6 +91,10 @@ client.on("message", (message) => {
 										"No",
 										"Maybe",
 		       "I don't know",
+		       "No doubt",
+		       "Doubtful",
+		       "Not sure",
+		       "Plenty of questions in the world I can't answer. This is one of them."
 									];
 
 		 var result = Math.floor((Math.random() * sayings.length) + 0);
