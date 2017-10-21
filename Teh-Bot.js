@@ -7,10 +7,10 @@ let prefix = "t!";
 // Command list
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.\nanswer - Serious Q&A.";
 var ModerationCMDS = "warn - Sends a DM to the specified user with a message saying that they've been warned.";
-var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!";
+var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nannoy - **Use with caution.**\nSome people do not like being annoyed, \nbut if you can do it, you can do it.";
 var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
 var versionIDNumber = "1.0.0"
-var SystemList = "t!help | " + versionIDName[1]
+var SystemList = "t!help | " + versionIDName[2]
 const AnEmbed = {
   "title": "tCommands",
   "description": "The prefix is " + prefix,
@@ -107,12 +107,32 @@ client.on("message", (message) => {
 		 
 		 if (!message.member.hasPermission("KICK_MEMBERS")) { message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to warn without the Kick Members permission!?"}})
 								    } else if (message.mentions.users.size === 0) {
-									message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to warn without mentioning ANYBODY!?"}})    
+									message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to warn without mentioning ANYBODY!?"}})  
+									    
 								    } else {
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been warned in " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been warned."}})	
 				}
 		       break;
+	 case "annoy":
+		 let member = message.mentions.members.first();
+		 if (message.mentions.users.size === 0) {
+			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
+		 } else {
+			message.channel.send({embed: {"title": "LEL", "color": 10196769,  "description": "Are you ready for them to be ANNOYED?"}})   
+			message.delete(0)
+			member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+			 member.send({embed: {"title": "LEL", "color": 28432738,  "description": "toi toi toi toi"}})
+		 }
+		 break;
 		 
 
 }
