@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<title>Tixol Wiki</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-yellow.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
+
+
+<div id="nav01" class="w3-bar-block">
+  <a class="w3-button w3-hover-theme w3-hide-large w3-large w3-right" href="javascript:void(0)" onclick="w3_close()">×</a>
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-orange" href="/docs/">Tixol Wiki</a>
+  <a class="w3-bar-item w3-button" href="#">Home</a>
+  <a class="w3-bar-item w3-button" href="/docs/setup.html">Setup the Bot</a>
+  <a class="w3-bar-item w3-button w3-theme" href="/docs/commands.html">Commands</a>
+  <a class="w3-bar-item w3-button" href="#bottom">To bottom</a>
+  <a class="w3-bar-item w3-button" href="https://tixol.js.org">Go home</a>
+</div>
+
+<div id="nav02">
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="img_demo_black.png" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="img_demo_summer.jpg" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="img_demo_blog.jpg" style="width:100%;"></a>
+</div>
+
+<div id="nav03">
+  <div class="w3-container w3-border-bottom">
+    <h1 class="w3-text-theme">W3.CSS</h1>
+  </div>
+  <ul class="w3-ul w3-large">  
+   <li class="w3-padding-16">Smaller and faster</li>
+   <li class="w3-padding-16">Easier to use</li>
+   <li class="w3-padding-16">Easier to learn</li>
+   <li class="w3-padding-16">CSS only</li>
+   <li class="w3-padding-16">Speeds up apps</li>
+   <li class="w3-padding-16">CSS equality for all</li>
+   <li class="w3-padding-16">PC Laptop Tablet Mobile</li>
+  </ul>
+</div>
+</div>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:300px;"> 
+
+<div class="w3-top w3-theme w3-large w3-hide-large">
+  <i class="fa fa-bars w3-button w3-theme w3-xlarge" onclick="w3_open()"></i>
+</div>
+
+<header class="w3-container w3-theme w3-padding-64 w3-center">
+  <h1 class="w3-xxxlarge w3-padding-16">Tixol Wiki</h1>
+</header>
+<p>Something. [required] (optional)</p>
+<h1>Help</h1>
+<h3>Type: Information<h3>
+<h4>Syntax: help</h4>
+<p>Help me daddy.</p>
+
+<h1>Ping</h1>
+<h3>Type: Information<h3>
+<h4>Syntax: help</h4>
+<p>What's the average heartbeat?</p>
+
+<h1>Info</h1>
+<h3>Type: Information<h3>
+<h4>Syntax: info</h4>
+<p>Information about the bot.</p>
+
+<h1>Warn</h1>
+<h3>Type: Moderation<h3>
+<h4>Syntax: warn [user]</h4>
+<p>Give somebody a warning.</p>
+
+<h1>Answer</h1>
+<h3>Type: Information<h3>
+<h4>Syntax: answer (question)</h4>
+<p>Answer my question pls?</p>
+
+<h1>Annoy</h1>
+<h3>Type: Fun</h3>
+<h4>Syntax: annoy [user]</h4>
+<p>Annoy your friends. Can be disabled in settings.</p>
+
+<h1>AnnoyBomb</h1>
+<h3>Type: Fun</h3>
+<h4>Syntax: annoybomb [user]</h4>
+<p>Your annoys are becoming deadly. Can be disabled in settings.</p>
+
+<h1>AnnoyNuke</h1>
+<h3>Type: Fun</h3>
+<h4>Syntax: annoynuke [user]</h4>
+<p>Your annoys are becoming very deadly. Can be disabled in settings.</p>
+
+<footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity" id="bottom">
+  <p>(c) Tixol 2017</p>
+</footer>
+
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+openNav("nav01");
+function openNav(id) {
+    document.getElementById("nav01").style.display = "none";
+    document.getElementById("nav02").style.display = "none";
+    document.getElementById("nav03").style.display = "none";
+    document.getElementById(id).style.display = "block";
+}
+</script>
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+<script>
+w3CodeColor();
+</script>
+</body>
+</html> 
