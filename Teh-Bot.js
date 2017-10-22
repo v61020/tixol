@@ -135,7 +135,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
 		 } else if (message.author.id === 258060857634848770  || message.author.id === 272657620693811200 || message.author.id === 345330930120130571) {
-			    			message.reply({embed: {"title": "LEL", "color": 10196769,  "description": "Are you ready for them to be ANNOYED?"}})   
+			    			message.reply({embed: {"title": "LEL", "color": 10196769,  "description": "**Silent mode is enabled for this user** Are you ready for them to be ANNOYED?"}})   
 		       member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}}) 
 member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}})
 			 member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}})
