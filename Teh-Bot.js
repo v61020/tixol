@@ -270,7 +270,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 break;
 	 case "invite" :
 		 
-message.channel.send({ embed: {"title": "Nice!", "description": "You requested an invite. [Go get 'em!](https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591)", "url": "Link: https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591", "color": 2614104} });
+           message.reply({ embed: {"title": "Nice!", "description": "You requested an invite. [Go get 'em!](https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591)", "url": "Link: https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591", "color": 2614104} });
 		 break;
 }
 });
