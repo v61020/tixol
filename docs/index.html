@@ -12,12 +12,34 @@
 
 <div id="nav01" class="w3-bar-block">
   <a class="w3-button w3-hover-theme w3-hide-large w3-large w3-right" href="javascript:void(0)" onclick="w3_close()">×</a>
-  <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-orange" href="#">Tixol Wiki</a>
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-orange" href="/docs/index.html">Tixol Wiki</a>
   <a class="w3-bar-item w3-button w3-theme" href="#">Home</a>
   <a class="w3-bar-item w3-button" href="/docs/setup.html">Setup the Bot</a>
   <a class="w3-bar-item w3-button" href="/docs/commands.html">Commands</a>
   <a class="w3-bar-item w3-button" href="#bottom">To bottom</a>
   <a class="w3-bar-item w3-button" href="https://tixol.js.org">Go home</a>
+</div>
+
+<div id="nav02">
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="img_demo_black.png" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="img_demo_summer.jpg" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="img_demo_blog.jpg" style="width:100%;"></a>
+</div>
+
+<div id="nav03">
+  <div class="w3-container w3-border-bottom">
+    <h1 class="w3-text-theme">W3.CSS</h1>
+  </div>
+  <ul class="w3-ul w3-large">  
+   <li class="w3-padding-16">Smaller and faster</li>
+   <li class="w3-padding-16">Easier to use</li>
+   <li class="w3-padding-16">Easier to learn</li>
+   <li class="w3-padding-16">CSS only</li>
+   <li class="w3-padding-16">Speeds up apps</li>
+   <li class="w3-padding-16">CSS equality for all</li>
+   <li class="w3-padding-16">PC Laptop Tablet Mobile</li>
+  </ul>
+</div>
 </div>
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
@@ -48,6 +70,42 @@
   <p class="w3-xlarge">A command list that goes in to detail what each command means.</p>
   <a href="/jsref/default.asp" class="w3-button w3-theme w3-hover-white">COMMAND REFERENCE</a>
 
+  <p><div class="w3-code notranslate">
+   <h1> Annoy </h1>
+   Type: Fun
+   This command annoys somebody. Can be disabled in settings.
+  </div>
+</div>
+
+<footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity" id="bottom">
+  <p>(c) Tixol 2017</p>
+</footer>
+
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+openNav("nav01");
+function openNav(id) {
+    document.getElementById("nav01").style.display = "none";
+    document.getElementById("nav02").style.display = "none";
+    document.getElementById("nav03").style.display = "none";
+    document.getElementById(id).style.display = "block";
+}
+</script>
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+<script>
+w3CodeColor();
+</script>
+</body>
+</html> 
   <p><div class="w3-code notranslate">
    <h1> Annoy </h1>
    Type: Fun
