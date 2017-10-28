@@ -11,6 +11,8 @@ var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messa
 var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
 var versionIDNumber = "1.0.0"
 var SystemList = "t!help | " + versionIDName[2]
+var ficmdobject = null
+var ficmdobject2 = null
 const AnEmbed = {
   "title": "tCommands",
   "description": "The prefix is " + prefix,
@@ -271,6 +273,29 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 	 case "invite" :
 		 
            message.reply({ embed: {"title": "Nice!", "description": "You requested an invite. [Go get 'em!](https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591)", "url": "Link: https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591", "color": 2614104} });
+		 break;
+	 case "idiot" :
+		 ficmdobject = {
+  "title": "Fresh Idiots",
+  "description": "Well, good luck to the fresh idiot.",
+  "url": "https://i.imgur.com/jscljlf.png",
+  "color": 11298208,
+  "timestamp": "2017-10-28T15:29:57.078Z",
+  "image": {
+    "url": "https://i.imgur.com/jscljlf.png"
+  },
+			 member = message.mentions.members.first();
+		 if (message.mentions.users.size === 0) {
+			 message.reply({embed: {"title": "Wait, what!?", "color": 10196769,  "description": "Who is the fresh idiot?"}})   
+} else {
+			ficmdobject2 = message.reply({ embed : ficmdobject })
+		 setTimeout(() => {
+                   ficmdobject2.edit({embed: {"title": "The fresh idiot is", "color": 10196769,  "description": member.username + "!", "image": {"url": member.avatarURL}}})
+              }, 5000);
+ficmdobject = null
+ficmdobject2 = null
+member = null
+}
 		 break;
 }
 });
