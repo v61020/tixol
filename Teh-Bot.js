@@ -294,9 +294,9 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
                    ficmdobject2.edit({embed: {"title": "The fresh idiot is", "color": 10196769,  "description": member.username + "!", "image": {"url": member.avatarURL}}})
               }, 5000);
 }
-ficmdobject = null
-ficmdobject2 = null
-member = null
+var ficmdobject = null
+var ficmdobject2 = null
+var member = null
 		 break;
 }
 });
