@@ -283,7 +283,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
   "timestamp": "2017-10-28T15:29:57.078Z",
   "image": {
     "url": "https://i.imgur.com/jscljlf.png"
-  };
+  }
 			 var member = message.mentions.members.first();
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Wait, what!?", "color": 10196769,  "description": "Who is the fresh idiot?"}})   
