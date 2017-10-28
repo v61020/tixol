@@ -292,10 +292,10 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 	  var ficmdobject2 = message.reply({ embed : ficmdobject })
 		 setTimeout(() => {
                    ficmdobject2.edit({embed: {"title": "The fresh idiot is", "color": 10196769,  "description": member.username + "!", "image": {"url": member.avatarURL}}})
-              }, 5000);
+              }, 5000)
 }
-var ficmdobject = null
-var ficmdobject2 = null
+var ficmdobject = null;
+var ficmdobject2 = null;
 var member = null
 		 break;
 }
