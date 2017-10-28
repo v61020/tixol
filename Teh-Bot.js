@@ -284,7 +284,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
   "image": {
     "url": "https://i.imgur.com/jscljlf.png"
   },
-			 member = message.mentions.members.first();
+			 member = message.mentions.members.first()
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Wait, what!?", "color": 10196769,  "description": "Who is the fresh idiot?"}})   
 } else {
