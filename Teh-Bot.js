@@ -284,19 +284,19 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
   "image": {
     "url": "https://i.imgur.com/jscljlf.png"
   }
-			 var member = message.mentions.members.first();
+			 member = message.mentions.members.first();
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Wait, what!?", "color": 10196769,  "description": "Who is the fresh idiot?"}})   
 } else {
 			
-	  var ficmdobject2 = message.reply({ embed : ficmdobject })
+	  ficmdobject2 = message.reply({ embed : ficmdobject })
 		 setTimeout(() => {
                    ficmdobject2.edit({embed: {"title": "The fresh idiot is", "color": 10196769,  "description": member.username + "!", "image": {"url": member.avatarURL}}})
               }, 5000)
 }
-var ficmdobject = null;
-var ficmdobject2 = null;
-var member = null
+ficmdobject = null;
+ficmdobject2 = null;
+member = null
 		 break;
 }
 });
