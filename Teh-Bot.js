@@ -284,11 +284,11 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
   "image": {
     "url": "https://i.imgur.com/jscljlf.png"
   }
-			 member = message.mentions.members.first();
+			
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Wait, what!?", "color": 10196769,  "description": "Who is the fresh idiot?"}})   
 } else {
-			
+		member = message.mentions.members.first();	
 	  ficmdobject2 = message.reply({ embed : ficmdobject })
 		 setTimeout(() => {
                    ficmdobject2.edit({embed: {"title": "The fresh idiot is", "color": 10196769,  "description": member.username + "!", "image": {"url": member.avatarURL}}})
