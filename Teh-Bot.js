@@ -270,9 +270,16 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 }
 		 member = null
 		 break;
-	 case "invite" :
-		 
-           message.reply({ embed: {"title": "Nice!", "description": "You requested an invite. [Go get 'em!](https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591)", "url": "Link: https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591", "color": 2614104} });
+	 case "youregay" :
+		 member = message.mentions.members.first();
+           if (message.mentions.users.size === 0) {
+			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "Who IS gay?"}})  
+		 } else {
+
+			message.reply({embed: {"title": "Target accquired", "color": 10196769,  "description": "They're so gay."}})   
+		       member.send({embed: { "title": "Well, I have bad news.", "color": 12345678, "description": "YOU'RE GAY, YOU'RE GAY, YOU'RE GAY, YOU'RE GAY, YOU'RE GAY YOU'RE SO GAY, YOU'RE GAY YOU'RE SO GAY, YOU'RE GAY, YOU'RE GAY, YOU'RE GAY, YOU'RE GAY"}}) 
+		 }
+		 member = null
 		 break;
 
 }
