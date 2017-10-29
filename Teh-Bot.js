@@ -288,7 +288,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 } else {
 
 			message.reply({embed: {"title": "Handing down!", "color": 12345678,  "description": "What a little good boy!"}})   
-		       member.send({embed: { "title": "Good news!", "color": 23232323, "description": "You have earned the shrine of respect in " + message.guild.name + " due to being a good boy.", "fields": [{"name": "Grand master", "value": "ecert#5084", "inline": true}, {"name": "Given by", "value": message.author.name, "inline": true},{"name": "Person of Respect", "value": member.username, "inline": true }]}}) 
+		       message.channel.send({"$(member)" , embed: { "title": "Good news!", "color": 23232323, "description": "You have earned the shrine of respect in " + message.guild.name + " due to being a good boy.", "fields": [{"name": "Grand master", "value": "ecert#5084", "inline": true}, {"name": "Given by", "value": message.author.name, "inline": true},{"name": "Person of Respect", "value": member.username, "inline": true }]}}) 
 		 }
 		 member = null
 		 break;
