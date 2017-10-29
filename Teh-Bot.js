@@ -300,7 +300,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 									message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to kick without mentioning ANYBODY!?"}})  
 								    } else if (member.hasPermission("BAN_MEMBERS") || member.hasPermission("KICK_MEMBERS")) {
 									    message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to kick a moderator!?"}})  
-								    }
+								    
 								    } else {
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been kicked out from " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been KICKED."}})	
@@ -316,7 +316,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 									message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to ban without mentioning ANYBODY!?"}})  
 								    } else if (member.hasPermission("BAN_MEMBERS") || member.hasPermission("KICK_MEMBERS")) {
 									    message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to ban a moderator!?"}})  
-								    }
+								    
 								    } else {
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been kicked out from " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been KICKED."}})	
