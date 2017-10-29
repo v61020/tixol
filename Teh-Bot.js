@@ -274,30 +274,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 
            message.reply({ embed: {"title": "Nice!", "description": "You requested an invite. [Go get 'em!](https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591)", "url": "Link: https://discordapp.com/oauth2/authorize?client_id=369094098499665921&scope=bot&permissions=2146958591", "color": 2614104} });
 		 break;
-	 case "idiot" :
-		 ficmdobject = {
-  "title": "Fresh Idiots",
-  "description": "Well, good luck to the fresh idiot.",
-  "url": "https://i.imgur.com/jscljlf.png",
-  "color": 11298208,
-  "timestamp": "2017-10-28T15:29:57.078Z",
-  "image": {
-    "url": "https://i.imgur.com/jscljlf.png"
-  }
-			
-		 if (message.mentions.users.size === 0) {
-			 message.reply({embed: {"title": "Wait, what!?", "color": 10196769,  "description": "Who is the fresh idiot?"}})   
-} else {
-		member = message.mentions.members.first()
-	  ficmdobject2 = message.reply({ embed : ficmdobject })
-		 setTimeout(() => {
-                   ficmdobject2.edit({embed: {"title": "The fresh idiot is", "color": 10196769,  "description": member.username + "!", "image": {"url": member.avatarURL}}})
-              }, 5000)
-}
-ficmdobject = null;
-ficmdobject2 = null;
-member = null
-		 break;
+
 }
 });
 
