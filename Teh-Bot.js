@@ -292,6 +292,38 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 }
 		 member = null
 		 break;
+		 case "kick" :
+    member = message.mentions.members.first();
+		 
+		 if (!message.member.hasPermission("KICK_MEMBERS")) { message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to kick without the Kick Members permission!?"}})
+								    } else if (message.mentions.users.size === 0) {
+									message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to kick without mentioning ANYBODY!?"}})  
+								    } else if (member.hasPermission("BAN_MEMBERS") || member.hasPermission("KICK_MEMBERS")) {
+									    message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to kick a moderator!?"}})  
+								    }
+								    } else {
+  member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been kicked out from " + message.guild.name + "."}})
+message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been KICKED."}})	
+			 member.kick()
+				}
+		 member = null
+		       break;
+	case "ban" :
+    member = message.mentions.members.first();
+		 
+		 if (!message.member.hasPermission("BAN_MEMBERS")) { message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to ban without the Kick Members permission!?"}})
+								    } else if (message.mentions.users.size === 0) {
+									message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to ban without mentioning ANYBODY!?"}})  
+								    } else if (member.hasPermission("BAN_MEMBERS") || member.hasPermission("KICK_MEMBERS")) {
+									    message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to ban a moderator!?"}})  
+								    }
+								    } else {
+  member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been kicked out from " + message.guild.name + "."}})
+message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been KICKED."}})	
+			 member.kick()
+				}
+		 member = null
+		       break;
 
 }
 });
