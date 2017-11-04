@@ -115,10 +115,10 @@ client.on("message", (message) => {
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been warned in " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been warned."}})	
   // Send the message to a designated channel on a server:
-  const targetChannel = member.guild.channels.find('name', 'tixol-log');
+  const targetChannel = message.author.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
-  targetChannel.send({embed: {"title": "Notification", "color": 13749278,  "description": member.username + " was warned by " + message.author.username}}) }
+  targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": member.username + " was warned by " + message.author.username}}) }
 				}
 		 member = null
 		       break;
@@ -195,7 +195,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 			 member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}})
 		 } else {
                            // Send the message to a designated channel on a server:
-  const targetChannel = member.guild.channels.find('name', 'tixol-log');
+  const targetChannel = message.author.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
   targetChannel.send({embed: {"title": "Notification", "color": 13749278,  "description": member.username + " was annoynuked by " + message.author.username}}) }
@@ -314,7 +314,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been kicked out from " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been KICKED."}})	
 			 member.kick()
-  const targetChannel = member.guild.channels.find('name', 'tixol-log');
+  const targetChannel = message.author.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
   targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": member.username + " was kiced by " + message.author.username}})
@@ -333,7 +333,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 								    
 								    } else {
 									      // Send the message to a designated channel on a server:
-  const targetChannel = member.guild.channels.find('name', 'tixol-log');
+  const targetChannel = message.author.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
   targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": member.username + " was banned by " + message.author.username}})
