@@ -361,7 +361,7 @@ client.on('guildMemberRemove', leftMember => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send({embed: {"title": "Player Left", "color": 14923286,  "" + leftMember.username + " has left this server.."}})
+  channel.send({embed: {"title": "Player Left", "color": 14923286,  "description": "" + leftMember.username + " has left this server.."}})
 });
 
 
