@@ -318,9 +318,9 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 									    message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "How dare you try to ban a moderator!?"}})  
 								    
 								    } else {
-  member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been kicked out from " + message.guild.name + "."}})
-message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "This troublemaker has been KICKED."}})	
-			 member.kick()
+  member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been banned in " + message.guild.name + "."}})
+message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "I am swinging the banhammer on this troublemaker!"}})	
+			 member.ban()
 				}
 		 member = null
 		       break;
