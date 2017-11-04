@@ -198,7 +198,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
   const targetChannel = message.author.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
-  targetChannel.send({embed: {"title": "Notification", "color": 13749278,  "description": "$(member) was annoynuked by " + message.author.username}}) }
+  targetChannel.send({embed: {"title": "Notification", "color": 13749278,  "description": member.username + " was annoynuked by " + message.author.username}}) }
 			message.reply({embed: {"title": "LEL", "color": 10196769,  "description": "Are you ready for them to be ANNOYED?"}})   
 		       member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}}) 
 member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}})
@@ -317,7 +317,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
   const targetChannel = message.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
-  targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": "$(member) was kiced by " + message.author.username}})
+  targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": "" + member.username + " was kiced by " + message.author.username}})
   }
 				}
 		 member = null
@@ -336,7 +336,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
   const targetChannel = message.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
-  targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": "$(member) was banned by " + message.author.username}})
+  targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": member.username + " was banned by " + message.author.username}})
   }
   member.send({embed: {"title": "Warning", "color": 10196769,  "description": "You have been banned in " + message.guild.name + "."}})
 message.channel.send({embed: {"title": "Success", "color": 10196769,  "description": "I am swinging the banhammer on this troublemaker!"}})	
@@ -347,21 +347,21 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 
 }
 });
-client.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', joinedMember => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'tixol-log');
+  const channel = joinedMember.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send({embed: {"title": "Player Joined", "color": 326483,  "description": "$(member) has joined this server! Please welcome them."}})
+  channel.send({embed: {"title": "Player Joined", "color": 326483,  "description": "" + joinedMember.username + " has joined this server! Please welcome them."}})
 });
-client.on('guildMemberRemove', member => {
+client.on('guildMemberRemove', leftMember => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'tixol-log');
+  const channel = leftMember.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send({embed: {"title": "Player Left", "color": 14923286,  "description": "$(member) has left this server.."}})
+  channel.send({embed: {"title": "Player Left", "color": 14923286,  "" + leftMember.username + " has left this server.."}})
 });
 
 
