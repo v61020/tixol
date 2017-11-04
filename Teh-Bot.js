@@ -353,7 +353,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send({embed: {"title": "Player Joined", "color": 14923286,  "description": member.username + " has joined this server! Please welcome them."})
+  channel.send({embed: {"title": "Player Joined", "color": 14923286,  "description": member.username + " has joined this server! Please welcome them."}})
 });
 client.on('guildMemberRemove', member => {
   // Send the message to a designated channel on a server:
@@ -361,7 +361,7 @@ client.on('guildMemberRemove', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send({embed: {"title": "Player Left", "color": 14923286,  "description": member.username + " has left this server.."})
+  channel.send({embed: {"title": "Player Left", "color": 14923286,  "description": member.username + " has left this server.."}})
 });
 
 
