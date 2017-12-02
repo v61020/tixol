@@ -7,10 +7,10 @@ var member = null
 // Command list
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.\nanswer - Serious Q&A.";
 var ModerationCMDS = "warn - Sends a DM to the specified user with a message saying that they've been warned.";
-var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nannoy - **Use with caution.**\nSome people do not like being annoyed, \nbut if you can do it, you can do it.\nannoybomb - A bigger annoyance.\nannoynuke - **DANGER!** USE THIS ONLY WITH PERMISSION OF THE PERSON YOU ARE ANNOYING\nIT COULD BE COUNTED AS HARRASMENT IF YOU DO NOT USE THIS WISELY\nyouregay - You're gay, you're gay, you're gay, you're gay.";
+var FunCMDS = "respond - I respond to anything you say.\n8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nannoy - **Use with caution.**\nSome people do not like being annoyed, \nbut if you can do it, you can do it.\nannoybomb - A bigger annoyance.\nannoynuke - **DANGER!** USE THIS ONLY WITH PERMISSION OF THE PERSON YOU ARE ANNOYING\nIT COULD BE COUNTED AS HARRASMENT IF YOU DO NOT USE THIS WISELY\nyouregay - You're gay, you're gay, you're gay, you're gay.";
 var versionIDName = ["HeyV6", "HelloV6", "YoV6", "TheV6", "BotV6", "EndOfTime", "NewBeginnings"]
 var versionIDNumber = "1.0.0"
-var SystemList = "Hey V6, help | " + versionIDName[2]
+var SystemList = "Hey V6, introduce yourself | " + versionIDName[2]
 var ficmdobject = null
 var ficmdobject2 = null
 const AnEmbed = {
@@ -55,6 +55,10 @@ client.on("message", (message) => {
   case "foo" :
     message.channel.send({ embed: {"description": 'Bar!', "color": 2671673}});
     break;
+    case "introduce" :
+		 message.channel.send({ embed: {"description": 'Hello!\nI am a bot that is awesome.\nNeed help? Say Hey V6, help me! And when you ask for help, remember to play with my commands.\n -V61020 as a bot', "color": 6496850}});
+    break;
+		 
    case "8ball" :
          	var sayings = ["It is certain",
 										"It is decidedly so",
@@ -79,6 +83,33 @@ client.on("message", (message) => {
 
 		 var result = Math.floor((Math.random() * sayings.length) + 0);
 		 var ResultEmbed = {"title": "8ball Answer", "description": sayings[result], "color": 01301313};
+     message.reply({embed: ResultEmbed});
+     break;
+		 case "respond" :
+         	var sayings = ["It is certain",
+										"So you admit it!",
+										"Hello",
+										"You are a noob",
+										"You are a duckface",
+										"Say again?",
+										"A duck says quack",
+										"A noob says Twee!",
+										"A cat says meow",
+										"These responds are random, right?",
+										"I should really stop replying to you.",
+										"A cool kid says that he is better than everybody else.",
+										"Why don't you go outside and play with friends?",
+										"Yes",
+										"No",
+										"Maybe",
+										"Bye",
+										"Chat with your friends!",
+										"Why are you chatting with me?",
+										"Go play a game with friends!",
+										"Go play a game"];
+
+		 var result = Math.floor((Math.random() * sayings.length) + 0);
+		 var ResultEmbed = {"title": "Response", "description": sayings[result], "color": 01301313};
      message.reply({embed: ResultEmbed});
      break;
   case "info" :
@@ -334,7 +365,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 								    
 								    } else {
 									      // Send the message to a designated channel on a server:
-  const targetChannel = message.guild.channels.find('name', 'tixol-log');
+  const targetChannel = message.guild.channels.find('name', 'v6-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
   targetChannel.send({embed: {"title": "Moderation Notification", "color": 13749278,  "description": member.username + " was banned by " + message.author.username}})
