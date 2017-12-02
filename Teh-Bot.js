@@ -2,15 +2,15 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 // Set the prefix
-let prefix = "t!";
+let prefix = "hey v6, ";
 var member = null
 // Command list
 var InformationCMDS = "help - Send help!\nhq - The HQ\ninvite - Invite me!\nping - What's the average heartbeat?\ninfo - 1v1 me bro.\nanswer - Serious Q&A.";
 var ModerationCMDS = "warn - Sends a DM to the specified user with a message saying that they've been warned.";
 var FunCMDS = "8ball - Q&A\nblah - Blah.\nfoo - Check this out. I can send messages!\nannoy - **Use with caution.**\nSome people do not like being annoyed, \nbut if you can do it, you can do it.\nannoybomb - A bigger annoyance.\nannoynuke - **DANGER!** USE THIS ONLY WITH PERMISSION OF THE PERSON YOU ARE ANNOYING\nIT COULD BE COUNTED AS HARRASMENT IF YOU DO NOT USE THIS WISELY\nyouregay - You're gay, you're gay, you're gay, you're gay.";
-var versionIDName = ["Numb", "Tixol", "TixolPlus", "TixolPremium", "NewAge", "EndTime", "NewBeginnings"]
+var versionIDName = ["HeyV6", "HelloV6", "YoV6", "TheV6", "BotV6", "EndOfTime", "NewBeginnings"]
 var versionIDNumber = "1.0.0"
-var SystemList = "t!help | " + versionIDName[2]
+var SystemList = "Hey V6, help | " + versionIDName[2]
 var ficmdobject = null
 var ficmdobject2 = null
 const AnEmbed = {
@@ -40,7 +40,8 @@ client.on("ready", () => {
 });
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
-  if (!message.content.startsWith(prefix) || message.author.bot || message.channel.type === "dm") return;
+  const teamCreate = message.content.toLowerCase();
+  if (!teamCreate.content.startsWith(prefix) || message.author.bot || message.channel.type === "dm") return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
