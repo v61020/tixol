@@ -380,6 +380,8 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 }
 });
 client.on('guildMemberAdd', joinedMember => {
+   // Say something
+	message.reply({embed: {"title": "Hello!", "color": 13402144,  "description": "**Welcome! I am on this server and I am here to say a few things.**\n---------------------------------\n Although I don't own this server, you will probably want to know where to start.\nWhen you join, read the rules of the server! \nAfter that, go chat!!\n---------------------------------\n I haven't introduced myself? Oh! Just say 'Hey V6, introduce yourself!' in the local bot commands area, and boom, you're a natural!\n---------------------------------\n                          *-V61020,*\n                          *a local friendly bot*"}})  
   // Send the message to a designated channel on a server:
   const channel = joinedMember.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
