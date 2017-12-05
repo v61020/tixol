@@ -173,7 +173,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 		 member = message.mentions.members.first();
 		 if (message.mentions.users.size === 0) {
 			 message.reply({embed: {"title": "Attention", "color": 10196769,  "description": "pls say something for annoy"}})  
-		 } else if (message.author.id === "258060857634848770"  || message.author.id === "272657620693811200" || message.author.id === "345330930120130571") {
+		 } else if (message.author.id === "345330930120130571"  || message.author.id === "386586870383116289") {
 			    			message.reply({embed: {"title": "LEL (Silent mode enabled)", "color": 10196769,  "description": "Are you ready for them to be ANNOYED?"}})   
 		       member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}}) 
 member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}})
@@ -227,7 +227,7 @@ member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi
 			 member.send({embed: { "title": "LEL", "color": 12345678, "description": "toi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\ntoi toi toi toi\n"}})
 		 } else {
                            // Send the message to a designated channel on a server:
-  const targetChannel = message.author.guild.channels.find('name', 'tixol-log');
+  const targetChannel = message.author.guild.channels.find('name', 'v6-log');
   // Do nothing if the channel wasn't found on this server
   if (targetChannel) {
   targetChannel.send({embed: {"title": "Notification", "color": 13749278,  "description": member.username + " was annoynuked by " + message.author.username}}) }
@@ -381,7 +381,7 @@ message.channel.send({embed: {"title": "Success", "color": 10196769,  "descripti
 });
 client.on('guildMemberAdd', joinedMember => {
    // Say something
-	message.reply({embed: {"title": "Hello!", "color": 13402144,  "description": "**Welcome! I am on this server and I am here to say a few things.**\n---------------------------------\n Although I don't own this server, you will probably want to know where to start.\nWhen you join, read the rules of the server! \nAfter that, go chat!!\n---------------------------------\n I haven't introduced myself? Oh! Just say 'Hey V6, introduce yourself!' in the local bot commands area, and boom, you're a natural!\n---------------------------------\n                          *-V61020,*\n                          *a local friendly bot*"}})  
+  joinedMember.send({embed: {"title": "Hello!", "color": 13402144,  "description": "**Welcome! I am on this server and I am here to say a few things.**\n---------------------------------\n Although I don't own this server, you will probably want to know where to start.\nWhen you join, read the rules of the server! \nAfter that, go chat!!\n---------------------------------\n I haven't introduced myself? Oh! Just say 'Hey V6, introduce yourself!' in the local bot commands area, and boom, you're a natural!\n---------------------------------\n                          *-V61020,*\n                          *a local friendly bot*"}})  
   // Send the message to a designated channel on a server:
   const channel = joinedMember.guild.channels.find('name', 'tixol-log');
   // Do nothing if the channel wasn't found on this server
